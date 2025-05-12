@@ -1,0 +1,154 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Theme styles */
+body.light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.blue {
+    background-color: #e6f2ff;
+    color: #003366;
+}
+
+body.green {
+    background-color: #e6ffe6;
+    color: #006600;
+}
+
+/* Transition button styles */
+.transition-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.transition-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-transition {
+    width: 100px;
+    height: 100px;
+    background-color: #ff5733;
+    margin: 20px 0;
+    transition: background-color 1s ease, border-radius 1s ease;
+}
+
+.color-transition:hover {
+    background-color: #33ff57;
+    border-radius: 50%;
+}
+
+/* Animation styles */
+.animated-box {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 8px;
+}
+
+/* Animation keyframes */
+@keyframes slideAndBounce {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(200px) rotate(45deg);
+    }
+    50% {
+        transform: translateX(0) rotate(0deg);
+    }
+    75% {
+        transform: translateX(-200px) rotate(-45deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate {
+    animation: slideAndBounce 2s ease-in-out;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Preference form styles */
+.preference-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.preference-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.preference-form input, 
+.preference-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#savePrefs {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#savePrefs:hover {
+    background-color: #2980b9;
+}
